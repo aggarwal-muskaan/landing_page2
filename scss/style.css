@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap");
+body,
+html {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "Public Sans", sans-serif;
+}
+
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+html h1,
+html h2,
+html h3,
+html h4,
+html h5,
+html h6 {
+  font-weight: 400;
+  margin: 0;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.1rem 1.5rem;
+  z-index: 2;
+  background-color: white;
+}
+
+@media screen and (min-width: 300px) {
+  .header button,
+  .header #cancel,
+  .header .navigation {
+    display: none;
+  }
+}
+
+.section-1 {
+  position: relative;
+  background: #fafafa;
+  text-align: center;
+  z-index: -1;
+  padding-bottom: 4rem;
+}
+
+.section-1 .background {
+  max-height: 270px;
+  background-image: url(../assets/bg-intro-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.section-1 .background img {
+  padding: 0 1.3rem;
+  width: 290px;
+  max-width: 300px;
+  height: 350px;
+  max-height: 350px;
+  z-index: 1;
+  position: relative;
+  top: -100px;
+}
+
+.section-1 .main-heading h1 {
+  color: #2d314d;
+  margin-top: 1rem;
+}
+
+.section-1 .main-heading p {
+  color: #9698a6;
+  line-height: 1.3rem;
+  font-size: 13px;
+  padding: 1rem 0;
+  padding: 0 1.3rem;
+}
+
+.request-invite {
+  color: white;
+  background: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
+  background: linear-gradient(to RIGHT, #31d35c, #2bb7da);
+  border: none;
+  border-radius: 5rem;
+  padding: 0.7rem 1.9rem;
+  font-family: "Public Sans", sans-serif;
+  margin-top: 1rem;
+}
+
+.section-2 {
+  background-color: #f3f4f6;
+  text-align: center;
+  padding: 4rem 1.3rem;
+}
+
+.section-2 .why-easybank h2 {
+  font-size: 1.8rem;
+  color: #2d314d;
+}
+
+.section-2 .why-easybank p,
+.section-2 .reasons article {
+  color: #9698a6;
+  line-height: 1.3rem;
+  font-size: 13px;
+  padding: 1rem 0;
+}
+
+.section-2 .reasons div {
+  margin-top: 2.5rem;
+}
+
+.section-2 .reasons img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.section-2 .reasons h3 {
+  color: #2d314d;
+  font-size: 1.1rem;
+  padding-top: 1rem;
+}
+
+.section-3 {
+  padding: 4.5rem 1rem;
+  background: #fafafa;
+  text-align: center;
+}
+
+.section-3 h2 {
+  font-size: 1.8rem;
+  color: #2d314d;
+}
+
+.section-3 .articles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 280px;
+  max-width: 100%;
+}
+
+.section-3 .articles .style-card {
+  color: #9698a6;
+  background-color: white;
+  border-radius: 0.4rem;
+  width: 280px;
+  max-width: 350px;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+  text-align: left;
+}
+
+.section-3 .articles .style-card img {
+  background-size: cover;
+  width: 280px;
+  height: 180px;
+  max-height: 200px;
+  border-top-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.section-3 .articles .style-card small {
+  font-size: x-small;
+}
+
+.section-3 .articles .style-card h4 {
+  color: #2d314d;
+}
+
+.section-3 .articles .style-card p {
+  font-size: 12px;
+}
+
+.section-3 .articles .style-card small,
+.section-3 .articles .style-card h4,
+.section-3 .articles .style-card p {
+  margin: 0.4rem 1rem;
+}
+
+.footer {
+  color: white;
+  background-color: #2d314d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem 0;
+}
+
+.footer .one .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 200px;
+}
+
+.footer .one .social img {
+  width: 25px;
+  height: 25px;
+}
+
+.footer .two {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  text-align: center;
+}
+
+.footer .two li {
+  margin: 1rem 0;
+}
+
+.footer .three {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer .three article {
+  color: #9698a6;
+}
+
+#footer-logo {
+  fill: white;
+}
+/*# sourceMappingURL=style.css.map */
