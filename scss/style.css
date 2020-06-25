@@ -30,6 +30,9 @@ html h6 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 1.1rem 1.5rem;
   z-index: 2;
   background-color: white;
@@ -40,7 +43,14 @@ html h6 {
   .header #cancel,
   .header .navigation {
     display: none;
+    cursor: pointer;
   }
+}
+
+.header #toggle {
+  width: 25px;
+  height: 12px;
+  cursor: pointer;
 }
 
 .section-1 {
@@ -83,7 +93,7 @@ html h6 {
   padding: 0 1.3rem;
 }
 
-.request-invite {
+.section-1 .main-heading button {
   color: white;
   background: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
   background: linear-gradient(to RIGHT, #31d35c, #2bb7da);
@@ -92,6 +102,11 @@ html h6 {
   padding: 0.7rem 1.9rem;
   font-family: "Public Sans", sans-serif;
   margin-top: 1rem;
+  cursor: pointer;
+}
+
+.section-1 .main-heading button:hover {
+  opacity: 0.3;
 }
 
 .section-2 {
@@ -129,7 +144,7 @@ html h6 {
 }
 
 .section-3 {
-  padding: 4.5rem 1rem;
+  padding: 4.5rem 1.3rem;
   background: #fafafa;
   text-align: center;
 }
@@ -186,6 +201,13 @@ html h6 {
 
 .section-3 .articles .style-card h4 {
   color: #2d314d;
+  cursor: pointer;
+}
+
+.section-3 .articles .style-card h4:hover {
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  color: #65f1d2;
 }
 
 .section-3 .articles .style-card p {
@@ -244,9 +266,16 @@ html h6 {
   width: 200px;
 }
 
-.footer .one .social img {
+.footer .one .social svg {
+  cursor: pointer;
   width: 25px;
   height: 25px;
+}
+
+.footer .one .social svg:hover path {
+  fill: #65f1d2;
+  -webkit-transition: fill 0.3s;
+  transition: fill 0.3s;
 }
 
 .footer .two {
@@ -258,6 +287,13 @@ html h6 {
 
 .footer .two li {
   margin: 1rem 0;
+  cursor: pointer;
+}
+
+.footer .two li:hover {
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  color: #65f1d2;
 }
 
 .footer .three {
@@ -279,5 +315,22 @@ html h6 {
 
 .footer .three article {
   color: #9698a6;
+}
+
+.footer .three .request-invite {
+  color: white;
+  background: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
+  background: linear-gradient(to RIGHT, #31d35c, #2bb7da);
+  border: none;
+  border-radius: 5rem;
+  padding: 0.7rem 1.9rem;
+  font-family: "Public Sans", sans-serif;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.footer .three .request-invite:hover {
+  -webkit-filter: brightness(170%);
+          filter: brightness(170%);
 }
 /*# sourceMappingURL=style.css.map */

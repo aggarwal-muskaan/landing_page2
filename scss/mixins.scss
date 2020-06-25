@@ -17,6 +17,32 @@
   padding: 1rem 0;
 }
 
+@mixin buttonstyle {
+  color: $white;
+  background: linear-gradient(to RIGHT, $limeGreen, $brightCyan);
+  border: none;
+  border-radius: 5rem;
+  padding: 0.7rem 1.9rem;
+  font-family: "Public Sans", sans-serif;
+  // font-size: 12px;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+@mixin hovereffect($var) {
+  @if $var== "text" {
+    &:hover {
+      transition: color 0.3s;
+      color: $GreenPlusBlue;
+    }
+  } @else if $var== "svg" {
+    &:hover path {
+      fill: $GreenPlusBlue;
+      transition: fill 0.3s;
+    }
+  }
+}
+
 @mixin navbar($mobile) {
   @if $mobile < 800px {
     @media screen and (min-width: $mobile) {
@@ -24,6 +50,7 @@
       #cancel,
       .navigation {
         display: none;
+        cursor: pointer;
       }
       @content;
     }
