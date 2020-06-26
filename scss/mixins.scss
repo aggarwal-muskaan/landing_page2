@@ -33,11 +33,13 @@
   @if $var== "text" {
     &:hover {
       transition: color 0.3s;
+      cursor: pointer;
       color: $GreenPlusBlue;
     }
   } @else if $var== "svg" {
     &:hover path {
       fill: $GreenPlusBlue;
+      cursor: pointer;
       transition: fill 0.3s;
     }
   }
@@ -52,6 +54,7 @@
         display: none;
         cursor: pointer;
       }
+
       @content;
     }
   } @else if $mobile >=800px {
