@@ -47,18 +47,44 @@
 
 @mixin navbar($mobile) {
   @if $mobile < 800px {
-    @media screen and (min-width: $mobile) {
-      button,
-      #cancel,
-      .navigation {
-        display: none;
-        cursor: pointer;
-      }
+    // @media screen and (min-width: $mobile){
+    button,
+    #cancel,
+    .navigation {
+      display: none;
+    }
 
-      @content;
-    }
+    @content;
+    // }
   } @else if $mobile >=800px {
-    @media screen and (min-width: $mobile) {
+    // @media screen and (min-width: $mobile){
+    #toggle,
+    #cancel {
+      display: none;
     }
+    .navigation {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      // height: 100%;
+      height: 57px;
+      flex-basis: 350px;
+      a {
+        // align-self: center;
+        height: 100%;
+        text-decoration: none;
+        color: $grayishBlue;
+        cursor: pointer;
+        border-bottom: 3px solid transparent;
+
+        &:hover {
+          border-bottom: 3px solid $limeGreen;
+          outline: none;
+        }
+      }
+    }
+    // }
+    @content;
   }
 }

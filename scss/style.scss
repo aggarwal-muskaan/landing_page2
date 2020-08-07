@@ -27,7 +27,8 @@ html {
   position: relative;
   z-index: 100;
   background-color: $white;
-  width: 90%;
+  // width: 90%;
+  width: auto;
   max-width: 100%;
   height: 60px;
   max-height: 60px;
@@ -49,9 +50,10 @@ html {
   }
 
   .navigation {
-    align-self: center;
+    justify-self: center;
     position: absolute;
     top: 5rem;
+    left: 6%;
     padding: 1rem 0;
     margin-left: -0.5rem;
     width: 90%;
@@ -271,7 +273,44 @@ html {
     }
   }
 }
+// @include media(">=tablet", "<=desktop") {
+//   .header {
+//     @include navbar(800px);
+//   }
+// }
 
+@media (min-width: 786px) {
+  .header {
+    @include navbar(800px);
+  }
+
+  .section-2 {
+    .reasons {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      div {
+        flex-basis: 35%;
+      }
+
+      article {
+        text-align: left;
+      }
+    }
+  }
+
+  .section-3 {
+    .articles {
+      flex-flow: row wrap;
+      justify-content: space-around;
+      align-items: inherit;
+      .style-card {
+        max-width: 45%;
+        // flex-basis: 35%;
+      }
+    }
+  }
+}
 .selectDisable {
   -webkit-user-select: none;
   -khtml-user-select: none;
