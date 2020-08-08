@@ -60,7 +60,7 @@ html h6 {
 }
 
 .header.navResponsive #toggle,
-.header.navResponsive .request-invite {
+.header.navResponsive button {
   display: none;
 }
 
@@ -414,8 +414,11 @@ html h6 {
     color: #9698a6;
     cursor: pointer;
     border-bottom: 3px solid transparent;
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
   }
   .header .navigation a:hover {
+    visibility: visible;
     border-bottom: 3px solid #31d35c;
     outline: none;
   }
@@ -450,6 +453,190 @@ html h6 {
   }
   .section-3 .articles .style-card {
     max-width: 45%;
+  }
+}
+
+@media (min-width: 1023px) {
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header button {
+    display: block;
+    color: white;
+    background: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
+    background: linear-gradient(to RIGHT, #31d35c, #2bb7da);
+    border: none;
+    border-radius: 5rem;
+    padding: 0.7rem 1.9rem;
+    font-family: "Public Sans", sans-serif;
+    margin-top: 1rem;
+    cursor: pointer;
+    margin: 0;
+  }
+  .header button:hover {
+    opacity: 0.3;
+  }
+  .header #toggle,
+  .header #cancel {
+    display: none;
+  }
+  .header .navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 57px;
+    -ms-flex-preferred-size: 350px;
+        flex-basis: 350px;
+  }
+  .header .navigation a {
+    height: 100%;
+    text-decoration: none;
+    color: #9698a6;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
+  }
+  .header .navigation a:hover {
+    visibility: visible;
+    border-bottom: 3px solid #31d35c;
+    outline: none;
+  }
+  .section-1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 0 0 11.11%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 400px;
+    max-height: 400px;
+  }
+  .section-1 .background {
+    background-image: url(../assets/bg-intro-desktop.svg);
+    background-size: cover;
+    background-position: right center;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    -ms-flex-preferred-size: 55%;
+        flex-basis: 55%;
+    max-height: 100%;
+  }
+  .section-1 .main-heading {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    -ms-flex-preferred-size: 340px;
+        flex-basis: 340px;
+    text-align: left;
+  }
+  .section-1 .main-heading h1 {
+    font-size: 37px;
+  }
+  .section-1 .main-heading p {
+    font-size: 15px;
+    padding: 0;
+  }
+  .section-2 {
+    text-align: left;
+    padding-left: 11.11%;
+  }
+  .section-2 .why-easybank p {
+    width: 500px;
+    margin: 0;
+  }
+  .section-2 .reasons {
+    max-width: 85%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .section-2 .reasons div {
+    -ms-flex-preferred-size: 18%;
+        flex-basis: 18%;
+  }
+  .section-3 {
+    padding: 4.5rem 11.11%;
+    text-align: left;
+  }
+  .section-3 .articles {
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .section-3 .style-card {
+    -ms-flex-preferred-size: 24%;
+        flex-basis: 24%;
+  }
+  .footer {
+    padding: 2rem 11.11%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .footer .one {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .footer .two {
+    width: 250px;
+    height: 95px;
+    max-width: 250px;
+    max-height: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .footer .two li {
+    margin: 0 0 0.5rem 0;
+  }
+  .footer .three {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
 }
 

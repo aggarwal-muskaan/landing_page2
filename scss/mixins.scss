@@ -56,7 +56,7 @@
 
     @content;
     // }
-  } @else if $mobile >=800px {
+  } @else if $mobile >=800px && $mobile <1024px {
     // @media screen and (min-width: $mobile){
     #toggle,
     #cancel {
@@ -77,14 +77,19 @@
         color: $grayishBlue;
         cursor: pointer;
         border-bottom: 3px solid transparent;
+        transition: all 0.5s ease-in-out 0s;
 
         &:hover {
+          // transform: scaleX(1);
+          visibility: visible;
           border-bottom: 3px solid $limeGreen;
           outline: none;
         }
       }
     }
     // }
+    @content;
+  } @else if $mobile>=1024px {
     @content;
   }
 }

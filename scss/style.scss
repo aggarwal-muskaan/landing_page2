@@ -45,7 +45,7 @@ html {
   }
 
   #toggle,
-  .request-invite {
+  button {
     display: none;
   }
 
@@ -311,6 +311,117 @@ html {
     }
   }
 }
+
+@media (min-width: 1023px) {
+  .header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    button {
+      display: block;
+      @include buttonstyle;
+      margin: 0;
+      &:hover {
+        opacity: 0.3;
+      }
+    }
+    @include navbar(1024px);
+  }
+
+  .section-1 {
+    display: flex;
+    padding: 0 0 0 11.11%;
+    justify-content: space-between;
+    height: 400px;
+    max-height: 400px;
+    .background {
+      background-image: url(../assets/bg-intro-desktop.svg);
+      background-size: cover;
+      background-position: right center;
+      order: 2;
+      flex-basis: 55%;
+      max-height: 100%;
+    }
+
+    .main-heading {
+      align-self: center;
+      order: 1;
+      flex-basis: 340px;
+      text-align: left;
+      h1 {
+        font-size: 37px;
+      }
+      p {
+        font-size: 15px;
+        padding: 0;
+      }
+    }
+  }
+
+  .section-2 {
+    text-align: left;
+    padding-left: 11.11%;
+
+    .why-easybank p {
+      width: 500px;
+      margin: 0;
+    }
+
+    .reasons {
+      max-width: 85%;
+      justify-content: space-between;
+
+      div {
+        flex-basis: 18%;
+      }
+    }
+  }
+
+  .section-3 {
+    padding: 4.5rem 11.11%;
+    text-align: left;
+
+    .articles {
+      width: 100%;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+    }
+    .style-card {
+      // max-width: 250px;
+      flex-basis: 24%;
+    }
+  }
+
+  .footer {
+    padding: 2rem 11.11%;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    .one {
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .two {
+      width: 250px;
+      height: 95px;
+      max-width: 250px;
+      max-height: 100px;
+      display: flex;
+      flex-flow: column wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+      li {
+        margin: 0 0 0.5rem 0;
+      }
+    }
+
+    .three {
+      align-items: flex-end;
+    }
+  }
+}
+
 .selectDisable {
   -webkit-user-select: none;
   -khtml-user-select: none;
