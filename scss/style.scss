@@ -36,6 +36,7 @@ html {
     width: 25px;
     height: 12px;
     cursor: pointer;
+    // margin: 0 auto;
   }
 }
 
@@ -312,11 +313,10 @@ html {
   }
 }
 
-@media (min-width: 1023px) {
+@media (min-width: 1024px) {
   .header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    @include navbar(1200px);
+
     button {
       display: block;
       @include buttonstyle;
@@ -325,9 +325,10 @@ html {
         opacity: 0.3;
       }
     }
-    @include navbar(1024px);
   }
+}
 
+@media (min-width: 1200px) {
   .section-1 {
     display: flex;
     padding: 0 0 0 11.11%;

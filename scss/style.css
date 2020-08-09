@@ -409,7 +409,9 @@ html h6 {
         flex-basis: 350px;
   }
   .header .navigation a {
-    height: 100%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     text-decoration: none;
     color: #9698a6;
     cursor: pointer;
@@ -420,6 +422,7 @@ html h6 {
   .header .navigation a:hover {
     visibility: visible;
     border-bottom: 3px solid #31d35c;
+    color: black;
     outline: none;
   }
   .section-2 .reasons {
@@ -456,7 +459,7 @@ html h6 {
   }
 }
 
-@media (min-width: 1023px) {
+@media (min-width: 1024px) {
   .header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -483,42 +486,9 @@ html h6 {
   .header button:hover {
     opacity: 0.3;
   }
-  .header #toggle,
-  .header #cancel {
-    display: none;
-  }
-  .header .navigation {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row nowrap;
-            flex-flow: row nowrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 57px;
-    -ms-flex-preferred-size: 350px;
-        flex-basis: 350px;
-  }
-  .header .navigation a {
-    height: 100%;
-    text-decoration: none;
-    color: #9698a6;
-    cursor: pointer;
-    border-bottom: 3px solid transparent;
-    -webkit-transition: all 0.5s ease-in-out 0s;
-    transition: all 0.5s ease-in-out 0s;
-  }
-  .header .navigation a:hover {
-    visibility: visible;
-    border-bottom: 3px solid #31d35c;
-    outline: none;
-  }
+}
+
+@media (min-width: 1200px) {
   .section-1 {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -527,19 +497,27 @@ html h6 {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    height: 400px;
-    max-height: 400px;
+    height: 450px;
+    max-height: 450px;
   }
   .section-1 .background {
     background-image: url(../assets/bg-intro-desktop.svg);
     background-size: cover;
-    background-position: right center;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
-    -ms-flex-preferred-size: 55%;
-        flex-basis: 55%;
+    -ms-flex-preferred-size: 65%;
+        flex-basis: 65%;
     max-height: 100%;
+    position: relative;
+    right: -11rem;
+  }
+  .section-1 .background img {
+    padding: 0;
+    width: 500px;
+    max-width: 600px;
+    height: 650px;
+    max-height: 700px;
   }
   .section-1 .main-heading {
     -ms-flex-item-align: center;
