@@ -1,0 +1,442 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap");
+@import "variables", "mixins";
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "Public Sans", sans-serif;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 400;
+    margin: 0;
+  }
+}
+
+.header {
+  @include navbar(300px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 100;
+  background-color: $white;
+  // width: 90%;
+  width: auto;
+  max-width: 100%;
+  height: 60px;
+  max-height: 60px;
+  #toggle {
+    width: 25px;
+    height: 12px;
+    cursor: pointer;
+    // margin: 0 auto;
+  }
+}
+
+.header.navResponsive {
+  #cancel {
+    display: block;
+  }
+
+  #toggle,
+  button {
+    display: none;
+  }
+
+  .navigation {
+    justify-self: center;
+    position: absolute;
+    top: 5rem;
+    left: 6%;
+    padding: 1rem 0;
+    margin-left: -0.5rem;
+    width: 90%;
+    height: 200px;
+    max-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $white;
+    border-radius: 0.3rem;
+    box-shadow: 0 0 100px hsl(230, 5%, 78%);
+
+    a {
+      text-decoration: none;
+      color: $darkBlue;
+      height: 30px;
+      width: auto;
+      @include hovereffect("text");
+    }
+  }
+}
+
+.section-1 {
+  // position: absolute;
+  @include background;
+  // z-index: -1;
+  padding-bottom: 4rem;
+
+  .background {
+    max-height: 270px;
+    background-image: url(../assets/bg-intro-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    img {
+      padding: 0 1.3rem;
+      width: 290px;
+      max-width: 300px;
+      height: 350px;
+      max-height: 350px;
+      z-index: 1;
+      position: relative;
+      top: -100px;
+    }
+  }
+
+  .main-heading {
+    h1 {
+      color: $darkBlue;
+      margin-top: 1rem;
+    }
+    p {
+      @include styledetails;
+      padding: 0 1.3rem;
+    }
+
+    button {
+      @include buttonstyle;
+      &:hover {
+        opacity: 0.3;
+      }
+    }
+  }
+}
+
+.section-2 {
+  background-color: $lightGrayishBlue;
+  text-align: center;
+  padding: 4rem 1.3rem;
+
+  .why-easybank h2 {
+    @include headings;
+  }
+
+  .why-easybank p,
+  .reasons article {
+    @include styledetails;
+  }
+
+  .reasons div {
+    margin-top: 2.5rem;
+  }
+
+  .reasons img {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .reasons h3 {
+    color: $darkBlue;
+    font-size: 1.1rem;
+    padding-top: 1rem;
+  }
+}
+
+.section-3 {
+  padding: 4.5rem 1.3rem;
+  @include background;
+
+  h2 {
+    @include headings;
+  }
+
+  .articles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 280px;
+    // max-width: 400px;
+    max-width: 100%;
+
+    .style-card {
+      color: $grayishBlue;
+      background-color: $white;
+      border-radius: 0.4rem;
+      // width: 280px;
+      max-width: 100%;
+
+      // max-width: 400px;
+      max-height: 350px;
+      margin-top: 2rem;
+      padding-bottom: 2rem;
+      text-align: left;
+
+      img {
+        background-size: cover;
+        object-fit: cover;
+        width: 100%;
+        height: 180px;
+        max-height: 200px;
+        border-top-left-radius: 0.4rem;
+        border-top-right-radius: 0.4rem;
+        margin-bottom: 1rem;
+      }
+
+      small {
+        font-size: x-small;
+      }
+
+      h4 {
+        color: $darkBlue;
+        @include hovereffect("text");
+      }
+
+      p {
+        font-size: 12px;
+      }
+
+      small,
+      h4,
+      p {
+        margin: 0.4rem 1rem;
+      }
+    }
+  }
+}
+
+.footer {
+  color: $white;
+  background-color: $darkBlue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+
+  .one {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100px;
+    justify-content: space-around;
+
+    #footer-logo {
+      fill: $white;
+    }
+    .social {
+      display: flex;
+      justify-content: space-between;
+      width: 200px;
+    }
+    .social svg {
+      width: 25px;
+      height: 25px;
+      @include hovereffect("svg");
+    }
+  }
+
+  .two {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-align: center;
+
+    li {
+      margin: 1rem 0;
+      @include hovereffect("text");
+    }
+  }
+
+  .three {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    article {
+      color: $grayishBlue;
+    }
+    .request-invite {
+      @include buttonstyle;
+      &:hover {
+        filter: brightness(170%);
+      }
+    }
+  }
+}
+// @include media(">=tablet", "<=desktop") {
+//   .header {
+//     @include navbar(800px);
+//   }
+// }
+
+@media (min-width: 786px) {
+  .header {
+    @include navbar(800px);
+  }
+
+  .section-2 {
+    .reasons {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      div {
+        flex-basis: 35%;
+      }
+
+      article {
+        text-align: left;
+      }
+    }
+  }
+
+  .section-3 {
+    .articles {
+      flex-flow: row wrap;
+      justify-content: space-around;
+      align-items: inherit;
+      .style-card {
+        max-width: 45%;
+        // flex-basis: 35%;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    @include navbar(1200px);
+
+    button {
+      display: block;
+      @include buttonstyle;
+      margin: 0;
+      &:hover {
+        opacity: 0.3;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .section-1 {
+    display: flex;
+    padding: 0 0 0 11.11%;
+    justify-content: space-between;
+    height: 450px;
+    max-height: 450px;
+    .background {
+      background-image: url(../assets/bg-intro-desktop.svg);
+      background-size: cover;
+      // background-position: bottom right;
+      order: 2;
+      flex-basis: 65%;
+      max-height: 100%;
+      position: relative;
+      right: -11rem;
+
+      img {
+        padding: 0;
+        width: 500px;
+        max-width: 600px;
+        height: 650px;
+        max-height: 700px;
+      }
+    }
+
+    .main-heading {
+      align-self: center;
+      order: 1;
+      flex-basis: 340px;
+      text-align: left;
+      h1 {
+        font-size: 37px;
+      }
+      p {
+        font-size: 15px;
+        padding: 0;
+      }
+    }
+  }
+
+  .section-2 {
+    text-align: left;
+    padding-left: 11.11%;
+
+    .why-easybank p {
+      width: 500px;
+      margin: 0;
+    }
+
+    .reasons {
+      max-width: 85%;
+      justify-content: space-between;
+
+      div {
+        flex-basis: 18%;
+      }
+    }
+  }
+
+  .section-3 {
+    padding: 4.5rem 11.11%;
+    text-align: left;
+
+    .articles {
+      width: 100%;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+    }
+    .style-card {
+      // max-width: 250px;
+      flex-basis: 24%;
+    }
+  }
+
+  .footer {
+    padding: 2rem 11.11%;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    .one {
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .two {
+      width: 250px;
+      height: 95px;
+      max-width: 250px;
+      max-height: 100px;
+      display: flex;
+      flex-flow: column wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+      li {
+        margin: 0 0 0.5rem 0;
+      }
+    }
+
+    .three {
+      align-items: flex-end;
+    }
+  }
+}
+
+.selectDisable {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
